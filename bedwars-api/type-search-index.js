@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"ro.fr33styler.bedwars.api.event.player","l":"BedwarsJoinEvent"},{"p":"ro.fr33styler.bedwars.api.event.player","l":"BedwarsLeaveEvent"},{"p":"ro.fr33styler.bedwars.api.event","l":"BedwarsStartEvent"},{"p":"ro.fr33styler.bedwars.api.event","l":"BedwarsStopEvent"}];updateSearchResults();

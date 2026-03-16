@@ -34,7 +34,8 @@ body {
 @media (max-width: 400px) {
   .box {
     width: device-width;
-    height: 500px;
+    height: auto;
+    display: inline-block;
     background-color: #303030;
     padding: 20px;
     margin: 20px auto;

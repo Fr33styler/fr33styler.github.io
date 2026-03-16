@@ -41,7 +41,7 @@ body {
   }
 }
 
-@media (min-width: 401px) and (max-width: 800px) {
+@media (min-width: 400px) and (max-width: 800px) {
   .box {
     width: device-width;
     height: 300px;
@@ -51,7 +51,7 @@ body {
   }
 }
 
-@media (min-width: 801px) {
+@media (min-width: 800px) {
   .box {
     width: 800px;
     height: 300px;

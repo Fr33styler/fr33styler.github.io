@@ -61,7 +61,7 @@ body {
   }
 }
 
-@media (min-height: 500px) and (min-width: 500px) {
+@media (min-height: 350px) and (min-width: 350px) {
   footer p {
     position: fixed;
     bottom: 0;
@@ -71,7 +71,7 @@ body {
   }
 }
 
-@media not ((min-height: 500px) and (min-width: 500px)) {
+@media not ((min-height: 350px) and (min-width: 350px)) {
   footer p {
     color: #ffffff;
     text-align: center;

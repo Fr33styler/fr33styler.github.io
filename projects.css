@@ -35,3 +35,8 @@ dialog button:hover {
   background-color: #ddd;
   color: black;
 }
+
+footer {
+  color: #ffffff;
+  text-align: center;
+}

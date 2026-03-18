@@ -39,7 +39,7 @@ body {
     padding: 20px;
     margin: 20px auto;
   }
-  .footer {
+  footer p {
     color: #ffffff;
     text-align: center;
   }
@@ -66,7 +66,7 @@ body {
 }
 
 @media (min-width: 400px) {
-  .footer {
+  footer p {
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -97,9 +97,4 @@ body {
 .boxes .box p button {
   border: none;
   background-color: #303030;
-}
-
-footer p {
-  color: #ffffff;
-  text-align: center;
 }

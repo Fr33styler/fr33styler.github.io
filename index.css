@@ -61,7 +61,7 @@ body {
   }
 }
 
-@media not ((max-width: 500px), (max-weight: 500px)) {
+@media (max-width: 500px), (max-weight: 500px) {
   footer p {
     color: #ffffff;
     text-align: center;

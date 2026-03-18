@@ -61,7 +61,7 @@ body {
   }
 }
 
-@media (max-height: 100%) {
+@media (min-height: 400px) and (min-width: 400px) {
   footer p {
     position: fixed;
     bottom: 0;
@@ -71,7 +71,7 @@ body {
   }
 }
 
-@media (min-height: 100%) {
+@media (max-height: 400px), (max-width: 400px)) {
   footer p {
     color: #ffffff;
     text-align: center;

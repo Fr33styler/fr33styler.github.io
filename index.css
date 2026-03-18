@@ -44,7 +44,7 @@ body {
 @media (min-width: 500px) and (max-width: 850px) {
   .box {
     width: device-width;
-    height: 25.5vw;
+    height: 300px;
     background-color: #303030;
     padding: 20px;
     margin: 20px auto;
@@ -53,17 +53,11 @@ body {
 
 @media (min-width: 850px) {
   .box {
-    width: 34vw;
-    height: 25.5vh;
+    width: 800px;
+    height: 300px;
     background-color: #303030;
     padding: 20px;
     margin: 20px auto;
-  }
-  .box h1 {
-    font-size: 2em
-  }
-  .box p {
-    font-size: 1em
   }
 }
 

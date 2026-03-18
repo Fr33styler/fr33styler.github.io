@@ -39,6 +39,11 @@ body {
     padding: 20px;
     margin: 20px auto;
   }
+  .footer {
+    width: 100%;
+    color: #ffffff;
+    text-align: center;
+  }
 }
 
 @media (min-width: 400px) and (max-width: 800px) {
@@ -49,6 +54,13 @@ body {
     padding: 20px;
     margin: 20px auto;
   }
+  .footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color: #ffffff;
+    text-align: center;
+  }
 }
 
 @media (min-width: 800px) {
@@ -58,6 +70,13 @@ body {
     background-color: #303030;
     padding: 20px;
     margin: 20px auto;
+  }
+  .footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color: #ffffff;
+    text-align: center;
   }
 }
 
@@ -83,15 +102,6 @@ body {
 .boxes .box p button {
   border: none;
   background-color: #303030;
-}
-
-.footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  color: #ffffff;
-  text-align: center;
 }
 
 footer p {

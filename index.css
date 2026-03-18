@@ -39,10 +39,6 @@ body {
     padding: 20px;
     margin: 20px auto;
   }
-  footer p {
-    color: #ffffff;
-    text-align: center;
-  }
 }
 
 @media (min-width: 500px) and (max-width: 850px) {
@@ -65,7 +61,14 @@ body {
   }
 }
 
-@media (min-width: 500px) {
+@media not ((max-width: 500px), (max-weight: 500px)) {
+  footer p {
+    color: #ffffff;
+    text-align: center;
+  }
+}
+
+@media (min-height: 500px), (min-width: 500px) {
   footer p {
     position: fixed;
     bottom: 0;

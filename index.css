@@ -40,7 +40,6 @@ body {
     margin: 20px auto;
   }
   .footer {
-    width: 100%;
     color: #ffffff;
     text-align: center;
   }
@@ -54,13 +53,6 @@ body {
     padding: 20px;
     margin: 20px auto;
   }
-  .footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    color: #ffffff;
-    text-align: center;
-  }
 }
 
 @media (min-width: 800px) {
@@ -71,6 +63,9 @@ body {
     padding: 20px;
     margin: 20px auto;
   }
+}
+
+@media (min-width: 400px) {
   .footer {
     position: fixed;
     bottom: 0;

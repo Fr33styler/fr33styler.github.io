@@ -31,7 +31,7 @@ body {
   float: right;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 399px) {
   .box {
     width: device-width;
     height: auto;
@@ -45,7 +45,7 @@ body {
   }
 }
 
-@media (min-width: 400px) and (max-width: 800px) {
+@media (min-width: 400px) and (max-width: 799px) {
   .box {
     width: device-width;
     height: 300px;

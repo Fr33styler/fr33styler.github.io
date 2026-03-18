@@ -61,18 +61,18 @@ body {
   }
 }
 
-@media (max-width: 500px), (max-weight: 500px) {
+@media (min-height: 500px) and (min-width: 500px) {
   footer p {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
     color: #ffffff;
     text-align: center;
   }
 }
 
-@media (min-height: 500px), (min-width: 500px) {
+@media not ((min-height: 500px) and (min-width: 500px)) {
   footer p {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
     color: #ffffff;
     text-align: center;
   }

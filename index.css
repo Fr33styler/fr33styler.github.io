@@ -105,15 +105,14 @@ body {
     color: #ffffff;
     text-align: center;
   }
-}
-
-@media ((min-height: 400px) and (min-width: 400px)) and ((max-width: 1920px), (max-height: 1080px)) {
-  footer p {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    color: #ffffff;
-    text-align: center;
+  @media (min-height: 400px) and (min-width: 400px) {
+    footer p {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      color: #ffffff;
+      text-align: center;
+    }
   }
 }
 

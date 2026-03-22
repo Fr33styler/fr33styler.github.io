@@ -88,7 +88,7 @@ body {
   }
 }
 
-@media (max-width: 1920px), (max-height: 1080px) {
+@media (min-width: 850px) and ((max-width: 1920px), (max-height: 1080px)) {
   .topnav a {
     float: left;
     color: #abb5bd;

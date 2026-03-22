@@ -128,10 +128,6 @@ body {
   text-align: center;
 }
 
-.box img {
-  filter: invert(100%);
-}
-
 .boxes .box p button {
   border: none;
   background-color: #303030;

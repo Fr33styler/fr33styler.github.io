@@ -1,34 +1,5 @@
-dialog {
-  border: none;
-  padding: 25px;
-  border-radius: 25px;
-  border: 2px solid #04AA6D;
-  background-color: #303030;
-  text-align: center;
-}
-
 dialog::backdrop {
   backdrop-filter: blur(5px);
-}
-
-dialog h1 {
-  color: #ffffff;
-  text-align: center;
-}
-
-dialog p {
-  color: #ffffff;
-  text-align: center;
-}
-
-dialog button {
-  background-color: #04AA6D;
-  color: white;
-  border: none;
-  padding: 7px;
-  border-radius: 7px;
-  text-align: center;
-  font-size: 16px;
 }
 
 dialog button:hover {
@@ -36,7 +7,69 @@ dialog button:hover {
   color: black;
 }
 
-footer {
-  color: #ffffff;
-  text-align: center;
+@media (min-width: 1920px) and (min-height: 1080px) {
+  dialog {
+    border: none;
+    padding: 1.2vmax;
+    border-radius: 1.2vmax;
+    border: 2px solid #04AA6D;
+    background-color: #303030;
+    text-align: center;
+  }
+  dialog button {
+    background-color: #04AA6D;
+    color: white;
+    border: none;
+    padding: 0.4vmax;
+    border-radius: 0.4vmax;
+    text-align: center;
+    font-size: 0.7vmax;
+  }
+  dialog h1 {
+    font-size: 1.35vmax;
+    color: #ffffff;
+    text-align: center;
+  }
+  dialog p {
+    font-size: 0.68vmax;
+    color: #ffffff;
+    text-align: center;
+  }
+  footer {
+    font-size: 0.68vmax;
+    color: #ffffff;
+    text-align: center;
+  }
+}
+
+@media (max-width: 1920px), (max-height: 1080px) {
+  dialog {
+    border: none;
+    padding: 25px;
+    border-radius: 25px;
+    border: 2px solid #04AA6D;
+    background-color: #303030;
+    text-align: center;
+  }
+  dialog button {
+    background-color: #04AA6D;
+    color: white;
+    border: none;
+    padding: 7px;
+    border-radius: 7px;
+    text-align: center;
+    font-size: 16px;
+  }
+  dialog h1 {
+    color: #ffffff;
+    text-align: center;
+  }
+  dialog p {
+    color: #ffffff;
+    text-align: center;
+  }
+  footer {
+    color: #ffffff;
+    text-align: center;
+  }
 }

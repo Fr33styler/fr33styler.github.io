@@ -78,6 +78,14 @@ body {
     color: #ffffff;
     text-align: center;
   }
+  footer p {
+    position: fixed;
+    bottom: 0;
+    font-size: 0.68vmax;
+    width: 100%;
+    color: #ffffff;
+    text-align: center;
+  }
 }
 
 @media (max-width: 1920px), (max-height: 1080px) {
@@ -99,7 +107,7 @@ body {
   }
 }
 
-@media (min-height: 400px) and (min-width: 400px) {
+@media ((min-height: 400px) and (min-width: 400px)) and ((max-width: 1920px), (max-height: 1080px)) {
   footer p {
     position: fixed;
     bottom: 0;

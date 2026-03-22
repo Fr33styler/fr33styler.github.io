@@ -52,7 +52,7 @@ body {
   }
 }
 
-@media (min-width: 1080px) {
+@media (min-width: 1920px) and (min-height: 1080px) {
   .box {
     width: 34vw;
     height: 25.5vh;
@@ -80,7 +80,7 @@ body {
   }
 }
 
-@media (max-width: 1080px) {
+@media (max-width: 1920px), (max-height: 1080px) {
   .topnav a {
     float: left;
     color: #abb5bd;

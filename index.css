@@ -88,7 +88,7 @@ body {
   }
 }
 
-@media (min-width: 850px) and (max-width: 1920px), (max-height: 1080px) {
+@media (max-width: 1920px), (max-height: 1080px) {
   .topnav a {
     float: left;
     color: #abb5bd;
@@ -97,12 +97,14 @@ body {
     padding: 14px 16px;
     text-decoration: none;
   }
-  .box {
-    width: 800px;
-    height: 300px;
-    background-color: #303030;
-    padding: 20px;
-    margin: 20px auto;
+  @media (min-width: 850px) {
+    .box {
+      width: 800px;
+      height: 300px;
+      background-color: #303030;
+      padding: 20px;
+      margin: 20px auto;
+    }
   }
   .box h1 {
     color: #04AA6D;

@@ -51,13 +51,41 @@ body {
   }
 }
 
-@media (min-width: 850px) {
+@media (min-width: 850px) and (max-width: 1080px) {
+  .box {
+    width: 800;
+    height: 300;
+    background-color: #303030;
+    padding: 20px;
+    margin: 20px auto;
+  }
+  .box h1 {
+    color: #04AA6D;
+    text-align: center;
+  }
+  .box p {
+    color: #ffffff;
+    text-align: center;
+  }
+}
+
+@media (min-width: 1080px) {
   .box {
     width: 34vw;
     height: 25.5vh;
     background-color: #303030;
     padding: 20px;
     margin: 20px auto;
+  }
+  .box h1 {
+    font-size: 1.35vmax;
+    color: #04AA6D;
+    text-align: center;
+  }
+  .box p {
+    font-size: 0.68vmax;
+    color: #ffffff;
+    text-align: center;
   }
 }
 
@@ -76,18 +104,6 @@ body {
     color: #ffffff;
     text-align: center;
   }
-}
-
-.box h1 {
-  font-size: 1.35vmax;
-  color: #04AA6D;
-  text-align: center;
-}
-
-.box p {
-  font-size: 0.68vmax;
-  color: #ffffff;
-  text-align: center;
 }
 
 .box p a {

@@ -7,15 +7,6 @@ body {
   overflow: hidden;
 }
 
-.topnav a {
-  float: left;
-  color: #abb5bd;
-  font-size: 0.72vmax;
-  text-align: center;
-  padding: 0.61vmax 0.7vmax;
-  text-decoration: none;
-}
-
 .topnav a.active {
   background-color: #04AA6D;
   color: white;
@@ -69,6 +60,14 @@ body {
     padding: 20px;
     margin: 20px auto;
   }
+  .topnav a {
+    float: left;
+    color: #abb5bd;
+    font-size: 0.72vmax;
+    text-align: center;
+    padding: 0.61vmax 0.7vmax;
+    text-decoration: none;
+  }
   .box h1 {
     font-size: 1.35vmax;
     color: #04AA6D;
@@ -82,6 +81,14 @@ body {
 }
 
 @media (max-width: 1080px) {
+  .topnav a {
+    float: left;
+    color: #abb5bd;
+    font-size: 17px;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
   .box h1 {
     color: #04AA6D;
     text-align: center;

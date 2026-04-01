@@ -54,8 +54,8 @@ body {
 
 @media (min-width: 1920px) and (min-height: 1080px) {
   .box {
-    width: 34vmax;
-    height: 12.8vmax;
+    width: 34vw;
+    height: 12.8vw;
     background-color: #303030;
     padding: 20px;
     margin: 20px auto;
@@ -63,25 +63,25 @@ body {
   .topnav a {
     float: left;
     color: #abb5bd;
-    font-size: 0.72vmax;
+    font-size: 0.72vw;
     text-align: center;
-    padding: 0.61vmax 0.7vmax;
+    padding: 0.61vw 0.7vw;
     text-decoration: none;
   }
   .box h1 {
-    font-size: 1.35vmax;
+    font-size: 1.35vw;
     color: #04AA6D;
     text-align: center;
   }
   .box p {
-    font-size: 0.68vmax;
+    font-size: 0.68vw;
     color: #ffffff;
     text-align: center;
   }
   footer p {
     position: fixed;
     bottom: 0;
-    font-size: 0.68vmax;
+    font-size: 0.68vw;
     width: 100%;
     color: #ffffff;
     text-align: center;

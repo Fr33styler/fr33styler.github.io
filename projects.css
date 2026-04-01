@@ -10,13 +10,13 @@ dialog button:hover {
 @media (min-width: 1920px) and (min-height: 1080px) {
   .box img {
     filter: invert(100%);
-    width: 2.2vmax;
-    height: 2.2vmax;
+    width: 2.2vw;
+    height: 2.2vw;
   }
   dialog {
     border: none;
-    padding: 1.2vmax;
-    border-radius: 1.2vmax;
+    padding: 1.2vw;
+    border-radius: 1.2vw;
     border: 2px solid #04AA6D;
     background-color: #303030;
     text-align: center;
@@ -25,23 +25,23 @@ dialog button:hover {
     background-color: #04AA6D;
     color: white;
     border: none;
-    padding: 0.4vmax;
-    border-radius: 0.4vmax;
+    padding: 0.4vw;
+    border-radius: 0.4vw;
     text-align: center;
-    font-size: 0.7vmax;
+    font-size: 0.7vw;
   }
   dialog h1 {
-    font-size: 1.35vmax;
+    font-size: 1.35vw;
     color: #ffffff;
     text-align: center;
   }
   dialog p {
-    font-size: 0.68vmax;
+    font-size: 0.68vw;
     color: #ffffff;
     text-align: center;
   }
   footer {
-    font-size: 0.68vmax;
+    font-size: 0.68vw;
     color: #ffffff;
     text-align: center;
   }

@@ -17,13 +17,13 @@ body {
   color: black;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 370px) {
   .navigator-right {
     color: #abb5bd;
   }
 }
 
-@media (min-width: 400px) {
+@media (min-width: 370px) {
   .navigator-right {
     color: #abb5bd;
     float: right;

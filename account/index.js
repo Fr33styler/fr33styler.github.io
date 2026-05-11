@@ -19,7 +19,6 @@ function getCookie(name) {
   return "Stranger";
 }
 
-const box = document.getElementById("box");
-const boxTitle = box.querySelector(".h1");
-boxTitle.textContent = boxTitle.textContent.replace("{username}", getCookie("username"));
+const title = document.getElementById("title");
+title.textContent = title.textContent.replace("Stranger", getCookie("username"));
 

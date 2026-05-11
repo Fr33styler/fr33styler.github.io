@@ -23,9 +23,14 @@ async function login() {
   });
 
   if (response.ok) {
-    console.log("Login successful!");
     window.location.replace('../account/');
   } else {
-    console.log("Invalid login!");
+    const errorMessage = document.getElementById("login-error");
+
+    errorMessage.style.display = "block";
+
+    setTimeout(() => {
+      errorMessage.style.display = "none";
+    }, 3000);
   }
 }

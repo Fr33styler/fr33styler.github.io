@@ -2,6 +2,11 @@
   text-align: center;
 }
 
+#login-error {
+  color: red;
+  display: none;
+}
+
 @media (min-width: 1920px) and (min-height: 1080px) {
   .box form label {
     font-size: 0.68vw;

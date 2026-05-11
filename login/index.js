@@ -7,7 +7,7 @@ async function login() {
         "Content-type": "application/json",
       },
     });
-    console.log("TEST" + response.status);
+    console.log("TEST" + res.status);
   
   try {
     const response = await fetch("https://cdn.fr33styler.ro:8443/auth/accounts/token/" + username.value, {
@@ -28,5 +28,5 @@ async function login() {
   } catch (error) {
     console.log(error.message);
   }
-  window.location.replace('../account/index.html');
+  window.location.replace('../account/');
 }

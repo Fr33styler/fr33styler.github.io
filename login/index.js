@@ -1,14 +1,6 @@
 async function login() {
   const username = document.getElementById("username");
   const password = document.getElementById("password");
-      const res = await fetch ("https://cdn.fr33styler.ro:8443/auth/accounts/welcome", {
-      method: "GET",
-      headers: {
-        "Content-type": "application/json",
-      },
-    });
-    console.log("TEST" + res.status);
-  
   try {
     const response = await fetch("https://cdn.fr33styler.ro:8443/auth/accounts/token/" + username.value, {
       credentials: "include",

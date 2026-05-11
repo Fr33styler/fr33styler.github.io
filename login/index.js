@@ -1,15 +1,14 @@
-async function checkToken() {
+async function checkTokenAndRedirect() {
   const renewToken = await fetch("https://cdn.fr33styler.ro:8443/auth/accounts/token", {
     credentials: "include",
     method: "POST",
   });
-
-  return renewToken.ok;
+  if (renewToken.ok) {
+     window.location.replace('../account/');
+  }
 }
 
-if (checkToken()) {
-  window.location.replace('../account/');
-}
+checkTokenAndRedirect();
 
 async function login() {
   const username = document.getElementById("username");

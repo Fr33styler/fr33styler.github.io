@@ -1,3 +1,12 @@
+const renewToken = await fetch("https://cdn.fr33styler.ro:8443/auth/accounts/token", {
+  credentials: "include",
+  method: "POST",
+});
+
+if (renewToken.ok) {
+  window.location.replace('../account/');
+}
+
 async function login() {
   const username = document.getElementById("username");
   const password = document.getElementById("password");
@@ -10,9 +19,8 @@ async function login() {
     },
   });
 
-  console.log(response.status);
   if (response.ok) {
-    console.log("Login successful! " + await response.text());
+    console.log("Login successful!");
     window.location.replace('../account/');
   } else {
     console.log("Invalid login!");

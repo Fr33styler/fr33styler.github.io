@@ -19,6 +19,8 @@ function getCookie(name) {
   return "Stranger";
 }
 
-const title = document.getElementById("title");
-title.textContent = title.textContent.replace("Stranger", getCookie("username"));
+document.addEventListener("DOMContentLoaded", () => {
+  const title = document.getElementById("title");
+  title.textContent = title.textContent.replace("Stranger", getCookie("username"));
+});
 

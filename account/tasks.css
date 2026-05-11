@@ -7,23 +7,8 @@ dialog button:hover {
   color: black;
 }
 
-.box p {
-  line-height: 0.4vw;
-}
-
 .buttons {
   text-align: center;
-}
-
-.buttons button {
-  color: white;
-  border: none;
-  border-radius: 0.34vw;
-  font-size: 0.6vw;
-  padding: 0.3vw 0.31vw;
-  text-decoration: none;
-  background-color: #04AA6D;
-  cursor: pointer;
 }
 
 .box .box-end {
@@ -46,18 +31,30 @@ dialog button:hover {
   background-color: #04AA6D;
 }
 
-.box .box-end .box-end-right button {
-  color: white;
-  border: none;
-  border-radius: 0.34vw;
-  font-size: 0.6vw;
-  padding: 0.3vw 0.31vw;
-  text-decoration: none;
-  background-color: #04AA6D;
-  cursor: pointer;
-}
-
 @media (min-width: 1920px) and (min-height: 1080px) {
+  .box p {
+    line-height: 0.4vw;
+  }
+  .buttons button {
+    color: white;
+    border: none;
+    border-radius: 0.34vw;
+    font-size: 0.6vw;
+    padding: 0.3vw 0.31vw;
+    text-decoration: none;
+    background-color: #04AA6D;
+    cursor: pointer;
+  }
+  .box .box-end .box-end-right button {
+    color: white;
+    border: none;
+    border-radius: 0.34vw;
+    font-size: 0.6vw;
+    padding: 0.3vw 0.31vw;
+    text-decoration: none;
+    background-color: #04AA6D;
+    cursor: pointer;
+  }
   dialog {
     border: none;
     padding: 1.2vw;
@@ -93,6 +90,29 @@ dialog button:hover {
 }
 
 @media (max-width: 1920px), (max-height: 1080px) {
+  .box p {
+    line-height: 4px;
+  }
+  .buttons button {
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 12px;
+    padding: 8px 9px;
+    text-decoration: none;
+    background-color: #04AA6D;
+    cursor: pointer;
+  }
+  .box .box-end .box-end-right button {
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 12px;
+    padding: 8px 9px;
+    text-decoration: none;
+    background-color: #04AA6D;
+    cursor: pointer;
+  }
   dialog {
     border: none;
     padding: 25px;

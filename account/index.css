@@ -2,21 +2,39 @@
   text-align: center;
 }
 
-.submenu a.active {
-  background-color: #04AA6D;
-  border-radius: 0.34vw;
-  color: white;
-}
-
 .submenu a:hover {
   background-color: #ddd;
   color: black;
 }
 
-.submenu a {
-  color: #abb5bd;
-  font-size: 0.6vw;
-  text-align: center;
-  padding: 0.3vw 0.31vw;
-  text-decoration: none;
+@media (min-width: 1920px) and (min-height: 1080px) {
+  .submenu a.active {
+    background-color: #04AA6D;
+    border-radius: 0.34vw;
+    color: white;
+  }
+
+  .submenu a {
+    color: #abb5bd;
+    font-size: 0.6vw;
+    text-align: center;
+    padding: 0.3vw 0.31vw;
+    text-decoration: none;
+  }
+}
+
+@media (max-width: 1920px), (max-height: 1080px) {
+  .submenu a.active {
+    background-color: #04AA6D;
+    border-radius: 9px;
+    color: white;
+  }
+
+  .submenu a {
+    color: #abb5bd;
+    font-size: 12px;
+    text-align: center;
+    padding: 8px 9px;
+    text-decoration: none;
+  }
 }

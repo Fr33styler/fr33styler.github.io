@@ -1,0 +1,22 @@
+.submenu {
+  text-align: center;
+}
+
+.submenu a.active {
+  background-color: #04AA6D;
+  border-radius: 0.34vw;
+  color: white;
+}
+
+.submenu a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.submenu a {
+  color: #abb5bd;
+  font-size: 0.6vw;
+  text-align: center;
+  padding: 0.3vw 0.31vw;
+  text-decoration: none;
+}

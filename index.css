@@ -4,6 +4,7 @@ body {
 
 .navigator {
   background-color: #303030;
+  border-radius: 0.5vw;
   overflow: hidden;
 }
 
@@ -64,6 +65,7 @@ body {
   .box {
     width: 34vw;
     height: 12.8vw;
+    border-radius: 0.5vw;
     background-color: #303030;
     padding: 20px;
     margin: 20px auto;
@@ -71,6 +73,7 @@ body {
   .navigator a {
     float: left;
     color: #abb5bd;
+    border-radius: 0.34vw;
     font-size: 0.72vw;
     text-align: center;
     padding: 0.61vw 0.7vw;
@@ -143,9 +146,4 @@ body {
 .box p a {
   color: #FFA500;
   text-align: center;
-}
-
-.boxes .box p button {
-  border: none;
-  background-color: #303030;
 }

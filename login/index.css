@@ -1,0 +1,19 @@
+.box form {
+  text-align: center;
+}
+
+.box form label {
+  font-size: 0.68vw;
+  color: #ffffff;
+}
+
+.box form input[type=submit] {
+  color: white;
+  border: none;
+  border-radius: 0.34vw;
+  font-size: 0.6vw;
+  padding: 0.3vw 0.31vw;
+  text-decoration: none;
+  background-color: #04AA6D;
+  cursor: pointer;
+}

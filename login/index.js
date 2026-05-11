@@ -1,0 +1,32 @@
+async function login() {
+  const username = document.getElementById("username");
+  const password = document.getElementById("password");
+      const res = await fetch ("https://cdn.fr33styler.ro:8443/auth/accounts/welcome", {
+      method: "GET",
+      headers: {
+        "Content-type": "application/json",
+      },
+    });
+    console.log("TEST" + response.status);
+  
+  try {
+    const response = await fetch("https://cdn.fr33styler.ro:8443/auth/accounts/token/" + username.value, {
+      credentials: "include",
+      method: "POST",
+      body: JSON.stringify({ password: password.value }),
+      headers: {
+        "Content-type": "application/json",
+      },
+    });
+
+    console.log(response.status);
+    if (response.ok) {
+      console.log("Login successful! " + await response.json());
+    } else {
+      console.log("Invalid login!");
+    }
+  } catch (error) {
+    console.log(error.message);
+  }
+  window.location.replace('../account/index.html');
+}

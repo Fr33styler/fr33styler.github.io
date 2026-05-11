@@ -11,14 +11,13 @@ async function login() {
       },
     });
 
-    console.log(response.status);
     if (response.ok) {
       console.log("Login successful! " + await response.json());
+      window.location.replace('../account/');
     } else {
       console.log("Invalid login!");
     }
   } catch (error) {
     console.log(error.message);
   }
-  window.location.replace('../account/');
 }

@@ -10,17 +10,15 @@ async function validateTokenOrRedirect() {
 
 validateTokenOrRedirect();
 
-function getCookie(name) {
-  const cookies = document.cookie.split('; ');
-  for (let i = 0; i < cookies.length; i++) {
-    const [key, value] = cookies[i].split('=');
-    if (key === name) return value;
+document.addEventListener("DOMContentLoaded", async () => {
+  
+  const usernameResponse = await fetch("https://cdn.fr33styler.ro:8443/auth/accounts/username", {
+    credentials: "include",
+    method: "GET",
+  });
+
+  if (usernameResponse.ok) {
+    const title = document.getElementById("title");
+    title.textContent = title.textContent.replace("Stranger", await usernameResponse.text());
   }
-  return "Stranger";
-}
-
-function updateTitle() {
-  const title = document.getElementById("title");
-  title.textContent = title.textContent.replace("Stranger", getCookie("username"));
-}
-
+});

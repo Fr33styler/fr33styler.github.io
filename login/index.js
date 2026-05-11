@@ -11,6 +11,7 @@ async function login() {
       },
     });
 
+    console.log(response.status);
     if (response.ok) {
       console.log("Login successful! " + await response.json());
       window.location.replace('../account/');

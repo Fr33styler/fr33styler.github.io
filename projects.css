@@ -21,7 +21,7 @@ dialog button:hover {
   }
   dialog {
     border: none;
-    padding: 1.2vw;
+    padding: 0.4vw;
     border-radius: 1.2vw;
     border: 2px solid #04AA6D;
     background-color: #303030;
@@ -38,7 +38,7 @@ dialog button:hover {
   }
   dialog h1 {
     font-size: 1.35vw;
-    color: #ffffff;
+    color: #04AA6D;
     text-align: center;
   }
   dialog p {
@@ -62,7 +62,7 @@ dialog button:hover {
   dialog {
     border: none;
     padding: 25px;
-    border-radius: 25px;
+    border-radius: 10px;
     border: 2px solid #04AA6D;
     background-color: #303030;
     text-align: center;
@@ -77,7 +77,7 @@ dialog button:hover {
     font-size: 16px;
   }
   dialog h1 {
-    color: #ffffff;
+    color: #04AA6D;
     text-align: center;
   }
   dialog p {

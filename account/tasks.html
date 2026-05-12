@@ -9,6 +9,38 @@
   <link rel="icon" type="image/png" sizes="32x32" href="../assets/icon.png">
 </head>
   <body>
+    <dialog id="new-task" popover>
+      <h1>Add a new task</h1>
+      <br>
+      <form id="task-form">
+        <label for="task">Task: </label>
+        <input type="text" id="task" name="task">
+        <br><br>
+        <label for="progress">Progress: </label>
+        <input type="number" id="progress" min="0" max="100" value="0">
+        <br><br>
+        <label for="note">Note: </label>
+        <input type="text" id="note" name="note">
+        <br><br>
+        <label for="date">Due: </label>
+        <input type="date" id="date" name="date" value="2026-05-12">
+        <input type="time" id="time" name="time" value="12:00">
+        <br><br>
+        <select id="priority">
+          <option value="HIGH">High</option>
+          <option value="MEDIUM" selected>Medium</option>
+          <option value="LOW">Low</option>
+        </select>
+        <select id="status">
+          <option value="finished">Finished</option>
+          <option value="in-progress">In Progress</option>
+          <option value="unfinished" selected>Unfinished</option>
+        </select>
+        <br><br>
+        <button type="button" popovertarget="new-task" popovertargetaction="hide" onclick="addTaskFromForm()">Add Task</button>
+        <button type="button" popovertarget="new-task" popovertargetaction="hide">Close</button>
+      </form>
+    </dialog>
     <div class="navigator">
       <a href="../">Home</a>
       <div class="navigator-right">
@@ -24,28 +56,9 @@
     </div>
     <br>
     <div class="buttons">
-      <button type="button">Add new task</button>
+      <button type="button" popovertarget="new-task">Add new task</button>
     </div>
-    <div class="boxes">
-      <div class="box">
-        <h1>Work at the cheese factory!</h1>
-        <br>
-        <div class="progress-border">
-          <div class="progress" style="width:20%">Progress: 20%</div>
-        </div>
-        <p><b>Priority: </b>HIGH</p>
-        <p><b>Status: </b>Unfinished</p>
-        <p><b>Due Date: </b>9-05-2026 21:12<p>
-        <p><b>Note: </b>Please rush<p>
-        <div class="box-end">
-          <p>Task #423</p>
-          <div class="box-end-right">
-            <button type="button">Edit</button>
-            <button type="button">Delete</button>
-          </div>
-        </div>
-      </div>
-    </div>
+    <div class="boxes" id="boxes"></div>
     <footer>Copyright © 2026. All Rights Reserved.</footer>
     <br><br>
   </body>

@@ -22,16 +22,31 @@ dialog button:hover {
   color: #606060;
 }
 
-.box .progress-border {
-  background-color: #414141;
-}
-
-.box .progress-border .progress {
-  color: white;
-  background-color: #04AA6D;
-}
-
 @media (min-width: 1920px) and (min-height: 1080px) {
+  .box .flex-box p {
+    color: white;
+    background-color: #04AA6D;
+    border-radius: 1vw;
+    padding: 0.3vw 0.4vw;
+  }
+  .box .flex-box {
+    gap: 2vw;
+    display: flex;
+    justify-content: center;
+  }
+  .box .progress-border {
+    border-radius: 1vw;
+    background-color: #414141;
+    height: 0.8vw;
+  }
+  .box .progress-border .progress {
+    color: white;
+    height: 100%;
+    padding-left: 0.3vw;
+    font-size: 0.6vw;
+    border-radius: 1vw;
+    background-color: #04AA6D;
+  }
   .box p {
     line-height: 0.4vw;
   }
@@ -58,11 +73,12 @@ dialog button:hover {
   dialog {
     border: none;
     padding: 1.2vw;
-    border-radius: 0.2vw;
+    border-radius: 0.4vw;
     border: 2px solid #04AA6D;
     background-color: #303030;
     text-align: center;
   }
+  dialog select,
   dialog button {
     background-color: #04AA6D;
     color: white;
@@ -74,10 +90,10 @@ dialog button:hover {
   }
   dialog h1 {
     font-size: 1.35vw;
-    color: #ffffff;
+    color: #04AA6D;
     text-align: center;
   }
-  dialog p {
+  dialog label {
     font-size: 0.68vw;
     color: #ffffff;
     text-align: center;
@@ -90,6 +106,30 @@ dialog button:hover {
 }
 
 @media (max-width: 1920px), (max-height: 1080px) {
+  .box .flex-box p {
+    color: white;
+    background-color: #04AA6D;
+    border-radius: 15px;
+    padding: 10px 14px;
+  }
+  .box .flex-box {
+    gap: 50px;
+    display: flex;
+    justify-content: center;
+  }
+  .box .progress-border {
+    border-radius: 20px;
+    background-color: #414141;
+    height: 20px;
+  }
+  .box .progress-border .progress {
+    color: white;
+    height: 100%;
+    padding-left: 6px;
+    font-size: 15px;
+    border-radius: 20px;
+    background-color: #04AA6D;
+  }
   .box p {
     line-height: 4px;
   }
@@ -116,11 +156,12 @@ dialog button:hover {
   dialog {
     border: none;
     padding: 25px;
-    border-radius: 25px;
+    border-radius: 10px;
     border: 2px solid #04AA6D;
     background-color: #303030;
     text-align: center;
   }
+  dialog select,
   dialog button {
     background-color: #04AA6D;
     color: white;
@@ -131,10 +172,10 @@ dialog button:hover {
     font-size: 16px;
   }
   dialog h1 {
-    color: #ffffff;
+    color: #04AA6D;
     text-align: center;
   }
-  dialog p {
+  dialog label {
     color: #ffffff;
     text-align: center;
   }

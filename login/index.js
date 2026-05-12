@@ -23,7 +23,7 @@ async function login() {
   });
 
   if (response.ok) {
-    localStorage.setItem("username", username.charAt(0).toUppercase() + username.slice(1));
+    localStorage.setItem("username", username.value.charAt(0).toUppercase() + username.value.slice(1));
 
     window.location.replace('../account/');
   } else {

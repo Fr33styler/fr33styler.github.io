@@ -61,6 +61,13 @@ async function addTaskFromForm() {
     const idValue = await response.text();
     addTask(idValue, task.value, progress.value, note.value, date.value + " " + time.value, priority.value, status.value);
   }
+  task.value = "";
+  progress.value = "0";
+  note.value = "";
+  date.value = "2026-05-12";
+  time.value = "12:00";
+  priority.value = "MEDIUM";
+  status.value = "unfinished";
 }
 
 function addTask(idValue, taskValue, progressValue, noteValue, dateTimeValue, priorityValue, statusValue) {

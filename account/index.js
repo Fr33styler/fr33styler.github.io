@@ -10,15 +10,10 @@ async function validateTokenOrRedirect() {
 
 validateTokenOrRedirect();
 
-document.addEventListener("DOMContentLoaded", async () => {
-  
-  const usernameResponse = await fetch("https://cdn.fr33styler.ro:8443/auth/accounts/username", {
-    credentials: "include",
-    method: "GET",
-  });
+document.addEventListener("DOMContentLoaded", () => {
+  const username = localStorage.getItem("username");
+  if (username == null) return;
 
-  if (usernameResponse.ok) {
-    const title = document.getElementById("title");
-    title.textContent = title.textContent.replace("Stranger", await usernameResponse.text());
-  }
+  const title = document.getElementById("title");
+  title.textContent = title.textContent.replace("Stranger", username);
 });

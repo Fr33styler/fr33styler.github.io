@@ -23,6 +23,8 @@ async function login() {
   });
 
   if (response.ok) {
+    localStorage.setItem("username", username.charAt(0).toUppercase() + username.slice(1));
+
     window.location.replace('../account/');
   } else {
     const errorMessage = document.getElementById("login-error");

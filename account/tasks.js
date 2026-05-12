@@ -46,11 +46,11 @@ async function addTaskFromForm() {
     method: "POST",
     body: JSON.stringify({ 
       task: task.value,
-      priority: priority.value;
-      status: status.value;
-      progress: progress.value / 100;
-      dueDate: date.value + "T" + time.value;
-      note: note.value;
+      priority: priority.value,
+      status: status.value,
+      progress: progress.value / 100,
+      dueDate: date.value + "T" + time.value,
+      note: note.value,
     }),
     headers: {
       "Content-type": "application/json",

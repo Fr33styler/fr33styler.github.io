@@ -13,7 +13,7 @@ validateTokenOrRedirect();
 document.addEventListener("DOMContentLoaded", async () => {
     await validateTokenOrRedirect();
 
-    const response = await fetch("https://cdn.fr33styler.ro:8443//api/tasks/filtered", {
+    const response = await fetch("https://cdn.fr33styler.ro:8443/api/tasks/filtered", {
     credentials: "include",
     method: "GET",
     headers: {
@@ -41,7 +41,7 @@ async function addTaskFromForm() {
 
   await validateTokenOrRedirect();
   
-  const response = await fetch("https://cdn.fr33styler.ro:8443//api/tasks", {
+  const response = await fetch("https://cdn.fr33styler.ro:8443/api/tasks", {
     credentials: "include",
     method: "POST",
     body: JSON.stringify({ 
@@ -179,7 +179,7 @@ function addTask(idValue, taskValue, progressValue, noteValue, dateTimeValue, pr
 async function deleteTask(id) {
   await validateTokenOrRedirect();
 
-  const response = await fetch("https://cdn.fr33styler.ro:8443//api/tasks/" + id, {
+  const response = await fetch("https://cdn.fr33styler.ro:8443/api/tasks/" + id, {
     credentials: "include",
     method: "DELETE",
     headers: {

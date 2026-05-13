@@ -1,11 +1,14 @@
 async function validateTokenOrRedirect() {
-  const renewToken = await fetch("https://cdn.fr33styler.ro:8443/auth/accounts/token", {
-    credentials: "include",
-    method: "POST",
-  });
-  if (!renewToken.ok) {
-    window.location.replace('../login');
-  }
+  try {
+    const renewToken = await fetch("https://cdn.fr33styler.ro:8443/auth/accounts/token", {
+      credentials: "include",
+      method: "POST",
+    });
+
+    if (!renewToken.ok) {
+      window.location.replace('../login');
+    }
+  } catch (err) {}
 }
 
 validateTokenOrRedirect();
@@ -17,3 +20,17 @@ document.addEventListener("DOMContentLoaded", () => {
   const title = document.getElementById("title");
   title.textContent = title.textContent.replace("Stranger", username);
 });
+
+async function logOff() {
+  try {
+    await fetch("https://cdn.fr33styler.ro:8443/auth/accounts/token", {
+      credentials: "include",
+      method: "DELETE",
+      headers: {
+        "Content-type": "application/json",
+      },
+    });
+  } catch (err) {}
+  
+  window.location.replace('../');
+}

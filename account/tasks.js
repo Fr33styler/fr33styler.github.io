@@ -1,11 +1,14 @@
 async function validateTokenOrRedirect() {
-  const renewToken = await fetch("https://cdn.fr33styler.ro:8443/auth/accounts/token", {
-    credentials: "include",
-    method: "POST",
-  });
-  if (!renewToken.ok) {
-    window.location.replace('../login');
-  }
+  try {
+    const renewToken = await fetch("https://cdn.fr33styler.ro:8443/auth/accounts/token", {
+      credentials: "include",
+      method: "POST",
+    });
+
+    if (!renewToken.ok) {
+      window.location.replace('../login');
+    }
+  } catch (err) {}
 }
 
 validateTokenOrRedirect();
@@ -29,6 +32,20 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
   }
 });
+
+async function logOff() {
+  try {
+    await fetch("https://cdn.fr33styler.ro:8443/auth/accounts/token", {
+      credentials: "include",
+      method: "DELETE",
+      headers: {
+        "Content-type": "application/json",
+      },
+    });
+  } catch (err) {}
+  
+  window.location.replace('../');
+}
 
 async function addTaskFromForm() {
   const task = document.getElementById("task");
@@ -100,7 +117,7 @@ function addTask(idValue, taskValue, progressValue, noteValue, dateTimeValue, pr
 
   switch (priorityValue) {
     case "HIGH":
-      priority.style.backgroundColor = "#2E7D32";
+      priority.style.backgroundColor = "#E53935";
       priority.appendChild(document.createTextNode("High"));
       break;
     case "MEDIUM":
@@ -108,7 +125,7 @@ function addTask(idValue, taskValue, progressValue, noteValue, dateTimeValue, pr
       priority.appendChild(document.createTextNode("Medium"));
       break;
     case "LOW":
-      priority.style.backgroundColor = "#E53935";
+      priority.style.backgroundColor = "#2E7D32";
       priority.appendChild(document.createTextNode("Low"));
       break;
     default:
@@ -116,6 +133,7 @@ function addTask(idValue, taskValue, progressValue, noteValue, dateTimeValue, pr
 
   flexBox1.appendChild(priority);
   const status = document.createElement("p");
+  status.className = "status";
   const statusLabel = document.createElement("b");
   statusLabel.textContent = "Status: ";
   status.appendChild(statusLabel);
@@ -167,6 +185,11 @@ function addTask(idValue, taskValue, progressValue, noteValue, dateTimeValue, pr
   const editButton = document.createElement("button");
   editButton.type = "button";
   editButton.textContent = "Edit";
+  editButton.setAttribute("popovertarget", "edit-task");
+  editButton.addEventListener("click", () => {
+    const editForm = document.getElementById("edit-form");
+    editForm.setAttribute("data-form-id", idValue);
+  });
   boxEndRight.appendChild(editButton);
   boxEndRight.appendChild(document.createTextNode(" "));
   const deleteButton = document.createElement("button");
@@ -181,6 +204,63 @@ function addTask(idValue, taskValue, progressValue, noteValue, dateTimeValue, pr
   
 
   boxes.appendChild(box);
+}
+
+async function editTaskFromForm() {
+  const editForm = document.getElementById("edit-form");
+  const idValue = editForm.getAttribute("data-form-id");
+
+  const progress = document.getElementById("edit-progress");
+  const status = document.getElementById("edit-status");
+
+  await validateTokenOrRedirect();
+
+  try {
+    const response = await fetch("https://cdn.fr33styler.ro:8443/api/tasks/" + idValue + "/progress/" + progress.value / 100, {
+      credentials: "include",
+      method: "PATCH",
+      headers: {
+        "Content-type": "application/json",
+      },
+    });
+    if (response.ok) {
+      const taskBox = document.getElementById(idValue);
+      const progress = parent.querySelector(".progress");
+      progress.textContent = progress.style.width = progress.value + "%";
+    }
+  } catch (err) {}
+
+  try {
+    const response = await fetch("https://cdn.fr33styler.ro:8443/api/tasks/" + idValue + "/status/" + status.value, {
+      credentials: "include",
+      method: "PATCH",
+      headers: {
+        "Content-type": "application/json",
+      },
+    });
+    if (response.ok) {
+      const taskBox = document.getElementById(idValue);
+      const status = parent.querySelector(".status");
+      switch (status.value) {
+        case "finished":
+          status.style.backgroundColor = "#2E7D32";
+          status.appendChild(document.createTextNode("Finished"));
+          break;
+        case "in-progress":
+          status.style.backgroundColor = "#F57C00";
+          status.appendChild(document.createTextNode("In Progress"));
+          break;
+        case "unfinished":
+          status.style.backgroundColor = "#E53935";
+          status.appendChild(document.createTextNode("Unfinished"));
+          break;
+        default:
+      }
+    }
+  } catch (err) {}
+
+  progress.value = "0";
+  status.value = "unfinished";
 }
 
 async function deleteTask(id) {

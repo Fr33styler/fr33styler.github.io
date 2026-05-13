@@ -33,6 +33,7 @@ dialog button:hover {
     gap: 2vw;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
   }
   .box .progress-border {
     border-radius: 1vw;
@@ -116,6 +117,7 @@ dialog button:hover {
     gap: 50px;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
   }
   .box .progress-border {
     border-radius: 20px;

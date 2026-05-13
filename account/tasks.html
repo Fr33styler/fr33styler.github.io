@@ -41,6 +41,23 @@
         <button type="button" popovertarget="new-task" popovertargetaction="hide">Close</button>
       </form>
     </dialog>
+    <dialog id="edit-task" popover>
+      <h1>Edit a task!</h1>
+      <br>
+      <form id="edit-form">
+        <label for="edit-progress">Progress: </label>
+        <input type="number" id="edit-progress" min="0" max="100" value="0">
+        <br><br>
+        <select id="edit-status">
+          <option value="finished">Finished</option>
+          <option value="in-progress">In Progress</option>
+          <option value="unfinished" selected>Unfinished</option>
+        </select>
+        <br><br>
+        <button type="button" popovertarget="edit-task" popovertargetaction="hide" onclick="editTaskFromForm()">Edit Task</button>
+        <button type="button" popovertarget="edit-task" popovertargetaction="hide">Close</button>
+      </form>
+    </dialog>
     <div class="navigator">
       <a href="../">Home</a>
       <div class="navigator-right">
@@ -53,6 +70,7 @@
     <div class="submenu">
       <a href="/account/">Welcome</a>
       <a class="active" href="tasks">Tasks</a>
+      <a onclick="logOff(); return false;" href="../">Log Off</a>
     </div>
     <br>
     <div class="buttons">

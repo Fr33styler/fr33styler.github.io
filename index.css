@@ -2,6 +2,10 @@ body {
   background-color: #222
 }
 
+#login.active {
+  color: white;
+}
+
 .navigator {
   background-color: #303030;
   border-radius: 0.5vw;
@@ -65,6 +69,11 @@ body {
 }
 
 @media (min-width: 1920px) and (min-height: 1080px) {
+  #login {
+    color: white;
+    float: right;
+    padding: 0.41vw 0.7vw;
+  }
   .box {
     width: 34vw;
     height: 12.8vw;
@@ -103,6 +112,11 @@ body {
 }
 
 @media (max-width: 1920px), (max-height: 1080px) {
+  #login {
+    color: white;
+    float: right;
+    padding: 11px 16px;
+  }
   .navigator a {
     float: left;
     color: #abb5bd;

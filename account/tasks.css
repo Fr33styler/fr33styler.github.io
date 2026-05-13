@@ -61,6 +61,11 @@ dialog button:hover {
     background-color: #04AA6D;
     cursor: pointer;
   }
+  .buttons button:hover {
+    color: black;
+    border-radius: 0.34vw;
+    background-color: #ddd;
+  }
   .box .box-end .box-end-right button {
     color: white;
     border: none;
@@ -70,6 +75,11 @@ dialog button:hover {
     text-decoration: none;
     background-color: #04AA6D;
     cursor: pointer;
+  }
+  .box .box-end .box-end-right button:hover {
+    color: black;
+    border-radius: 0.34vw;
+    background-color: #ddd;
   }
   dialog {
     border: none;
@@ -132,9 +142,6 @@ dialog button:hover {
     border-radius: 20px;
     background-color: #04AA6D;
   }
-  .box p {
-    line-height: 4px;
-  }
   .buttons button {
     color: white;
     border: none;
@@ -145,6 +152,11 @@ dialog button:hover {
     background-color: #04AA6D;
     cursor: pointer;
   }
+  .buttons button:hover {
+    color: black;
+    border-radius: 8px;
+    background-color: #ddd;
+  }
   .box .box-end .box-end-right button {
     color: white;
     border: none;
@@ -154,6 +166,11 @@ dialog button:hover {
     text-decoration: none;
     background-color: #04AA6D;
     cursor: pointer;
+  }
+  .box .box-end .box-end-right button:hover {
+    color: black;
+    border-radius: 8px;
+    background-color: #ddd;
   }
   dialog {
     border: none;

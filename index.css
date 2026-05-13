@@ -2,7 +2,7 @@ body {
   background-color: #222
 }
 
-#login.active {
+#login-button.active {
   color: white;
 }
 
@@ -69,7 +69,7 @@ body {
 }
 
 @media (min-width: 1920px) and (min-height: 1080px) {
-  #login {
+  #login-button {
     color: white;
     float: right;
     padding: 0.41vw 0.7vw;
@@ -112,7 +112,7 @@ body {
 }
 
 @media (max-width: 1920px), (max-height: 1080px) {
-  #login {
+  #login-button {
     color: white;
     float: right;
     padding: 11px 16px;

@@ -189,6 +189,27 @@ function addTask(idValue, taskValue, progressValue, noteValue, dateTimeValue, pr
   editButton.addEventListener("click", () => {
     const editForm = document.getElementById("edit-form");
     editForm.setAttribute("data-form-id", idValue);
+
+    const taskBox = document.getElementById(idValue);
+    const statusBox = taskBox.querySelector(".status");
+    const progressBox = taskBox.querySelector(".progress");
+
+    const progress = document.getElementById("edit-progress");
+    const status = document.getElementById("edit-status");
+
+    progress.value = progressBox.textContent.slice(0, -1);
+    switch (statusBox.firstChild.textContent) {
+      case "Finished":
+        status.value = "finished";
+        break;
+      case "In Progress":
+        status.value = "in-progress";
+        break;
+      case "Unfinished":
+        status.value = "unfinished";
+        break;
+      default:
+    }
   });
   boxEndRight.appendChild(editButton);
   boxEndRight.appendChild(document.createTextNode(" "));
@@ -216,9 +237,6 @@ async function editTaskFromForm() {
   const taskBox = document.getElementById(idValue);
   const statusBox = taskBox.querySelector(".status");
   const progressBox = taskBox.querySelector(".progress");
-
-  progress.value = progressBox.textContent.slice(0, -1);
-  status.value = statusBox.textContent;
 
   await validateTokenOrRedirect();
 

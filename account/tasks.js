@@ -198,7 +198,7 @@ function addTask(idValue, taskValue, progressValue, noteValue, dateTimeValue, pr
     const status = document.getElementById("edit-status");
 
     progress.value = progressBox.textContent.slice(0, -1);
-    switch (statusBox.firstChild.textContent) {
+    switch (statusBox.children[1].textContent) {
       case "Finished":
         status.value = "finished";
         break;
@@ -265,15 +265,15 @@ async function editTaskFromForm() {
       switch (status.value) {
         case "finished":
           statusBox.style.backgroundColor = "#2E7D32";
-          statusBox.firstChild.textContent = "Finished";
+          statusBox.children[1].textContent = "Finished";
           break;
         case "in-progress":
           statusBox.style.backgroundColor = "#F57C00";
-          statusBox.firstChild.textContent = "In Progress";
+          statusBox.children[1].textContent = "In Progress";
           break;
         case "unfinished":
           statusBox.style.backgroundColor = "#E53935";
-          statusBox.firstChild.textContent = "Unfinished";
+          statusBox.children[1].textContent = "Unfinished";
           break;
         default:
       }

@@ -213,6 +213,13 @@ async function editTaskFromForm() {
   const progress = document.getElementById("edit-progress");
   const status = document.getElementById("edit-status");
 
+  const taskBox = document.getElementById(idValue);
+  const statusBox = taskBox.querySelector(".status");
+  const progressBox = taskBox.querySelector(".progress");
+
+  progress.value = progressBox.textContent.slice(0, -1);
+  status.value = statusBox.textContent;
+
   await validateTokenOrRedirect();
 
   try {
@@ -224,9 +231,7 @@ async function editTaskFromForm() {
       },
     });
     if (response.ok) {
-      const taskBox = document.getElementById(idValue);
-      const progress = taskBox.querySelector(".progress");
-      progress.textContent = progress.style.width = progress.value + "%";
+      progressBox.textContent = progressBox.style.width = progress.value + "%";
     }
   } catch (err) {}
 
@@ -239,28 +244,23 @@ async function editTaskFromForm() {
       },
     });
     if (response.ok) {
-      const taskBox = document.getElementById(idValue);
-      const status = taskBox.querySelector(".status");
       switch (status.value) {
         case "finished":
-          status.style.backgroundColor = "#2E7D32";
-          status.appendChild(document.createTextNode("Finished"));
+          statusBox.style.backgroundColor = "#2E7D32";
+          statusBox.firstChild.textContent = "Finished";
           break;
         case "in-progress":
-          status.style.backgroundColor = "#F57C00";
-          status.appendChild(document.createTextNode("In Progress"));
+          statusBox.style.backgroundColor = "#F57C00";
+          statusBox.firstChild.textContent = "In Progress";
           break;
         case "unfinished":
-          status.style.backgroundColor = "#E53935";
-          status.appendChild(document.createTextNode("Unfinished"));
+          statusBox.style.backgroundColor = "#E53935";
+          statusBox.firstChild.textContent = "Unfinished";
           break;
         default:
       }
     }
   } catch (err) {}
-
-  progress.value = "0";
-  status.value = "unfinished";
 }
 
 async function deleteTask(id) {

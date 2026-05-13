@@ -8,7 +8,9 @@ async function validateTokenOrRedirect() {
     if (!renewToken.ok) {
       window.location.replace('../login');
     }
-  } catch (err) {}
+  } catch (err) {
+    window.location.replace('../login');
+  }
 }
 
 validateTokenOrRedirect();

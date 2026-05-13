@@ -225,7 +225,7 @@ async function editTaskFromForm() {
     });
     if (response.ok) {
       const taskBox = document.getElementById(idValue);
-      const progress = parent.querySelector(".progress");
+      const progress = taskBox.querySelector(".progress");
       progress.textContent = progress.style.width = progress.value + "%";
     }
   } catch (err) {}
@@ -240,7 +240,7 @@ async function editTaskFromForm() {
     });
     if (response.ok) {
       const taskBox = document.getElementById(idValue);
-      const status = parent.querySelector(".status");
+      const status = taskBox.querySelector(".status");
       switch (status.value) {
         case "finished":
           status.style.backgroundColor = "#2E7D32";

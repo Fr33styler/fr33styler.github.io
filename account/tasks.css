@@ -48,9 +48,6 @@ dialog button:hover {
     border-radius: 1vw;
     background-color: #04AA6D;
   }
-  .box p {
-    line-height: 0.4vw;
-  }
   .buttons button {
     color: white;
     border: none;

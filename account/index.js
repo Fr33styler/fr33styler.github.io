@@ -5,12 +5,9 @@ async function validateTokenOrRedirect() {
       method: "POST",
     });
 
-    if (!renewToken.ok) {
-      window.location.replace('../login');
-    }
-  } catch (err) {
-    window.location.replace('../login');
-  }
+    if (renewToken.ok) return;
+  } catch (err) {}
+  window.location.replace('../login');
 }
 
 validateTokenOrRedirect();

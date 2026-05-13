@@ -4,19 +4,19 @@ async function validateTokenOrRedirect() {
       credentials: "include",
       method: "POST",
     });
-
-    if (!renewToken.ok) {
-      window.location.replace('../login');
+    if (renewToken.ok) {
+      return true;
     }
-  } catch (err) {
-    window.location.replace('../login');
-  }
+  } catch (err) {}
+  window.location.replace('../login');
+  return false;
 }
 
 validateTokenOrRedirect();
 
 document.addEventListener("DOMContentLoaded", async () => {
-    await validateTokenOrRedirect();
+    const sessionValid = await validateTokenOrRedirect();
+    if (!sessionValid) return;
 
     const response = await fetch("https://cdn.fr33styler.ro:8443/api/tasks/filtered", {
     credentials: "include",
@@ -58,7 +58,8 @@ async function addTaskFromForm() {
   const priority = document.getElementById("priority");
   const status = document.getElementById("status");
 
-  await validateTokenOrRedirect();
+  const sessionValid = await validateTokenOrRedirect();
+  if (!sessionValid) return;
   
   const response = await fetch("https://cdn.fr33styler.ro:8443/api/tasks", {
     credentials: "include",
@@ -240,7 +241,8 @@ async function editTaskFromForm() {
   const statusBox = taskBox.querySelector(".status");
   const progressBox = taskBox.querySelector(".progress");
 
-  await validateTokenOrRedirect();
+  const sessionValid = await validateTokenOrRedirect();
+  if (!sessionValid) return;
 
   try {
     const response = await fetch("https://cdn.fr33styler.ro:8443/api/tasks/" + idValue + "/progress/" + progress.value / 100, {
@@ -284,7 +286,8 @@ async function editTaskFromForm() {
 }
 
 async function deleteTask(id) {
-  await validateTokenOrRedirect();
+  const sessionValid = await validateTokenOrRedirect();
+  if (!sessionValid) return;
 
   const response = await fetch("https://cdn.fr33styler.ro:8443/api/tasks/" + id, {
     credentials: "include",

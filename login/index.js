@@ -4,9 +4,10 @@ async function validateTokenAndRedirect() {
       credentials: "include",
       method: "POST",
     });
-    if (!renewToken.ok) return;
+    if (renewToken.ok) {
+      window.location.replace('../account/');
+    }
   } catch (err) {}
-  window.location.replace('../account/');
 }
 
 validateTokenAndRedirect();
